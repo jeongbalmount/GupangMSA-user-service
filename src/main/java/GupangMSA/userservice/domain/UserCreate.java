@@ -1,5 +1,6 @@
 package GupangMSA.userservice.domain;
 
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
@@ -13,6 +14,7 @@ public class UserCreate {
     private final String postNumber;
     private final String phoneNumber;
 
+    @Builder
     public UserCreate(String name, String email, String password, String city,
                       String street, String postNumber, String phoneNumber) {
         this.name = name;

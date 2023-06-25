@@ -2,6 +2,7 @@ package GupangMSA.userservice.domain;
 
 import GupangMSA.userservice.service.port.holder.ClockHolder;
 import GupangMSA.userservice.service.port.holder.PasswordHolder;
+import GupangMSA.userservice.service.port.holder.UuidHolder;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -40,8 +41,11 @@ public class User {
         this.lastLoginAt = lastLoginAt;
     }
 
-    public static User from(UserCreate userCreate, PasswordHolder passwordHolder, ClockHolder clockHolder) {
-        String uuid = UUID.randomUUID().toString();
+    public static User from(UserCreate userCreate,
+                            PasswordHolder passwordHolder,
+                            ClockHolder clockHolder,
+                            UuidHolder uuidHolder) {
+
         return User.builder()
                 .name(userCreate.getName())
                 .email(userCreate.getEmail())
@@ -50,7 +54,7 @@ public class User {
                 .street(userCreate.getStreet())
                 .postNumber(userCreate.getPostNumber())
                 .phoneNumber(userCreate.getPhoneNumber())
-                .userUuid(uuid)
+                .userUuid(uuidHolder.random())
                 .joinedAt(clockHolder.millis())
                 .build();
     }
@@ -88,8 +92,6 @@ public class User {
                 .lastLoginAt(lastLoginAt)
                 .build();
     }
-
-
 }
 
 
