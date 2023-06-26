@@ -1,8 +1,8 @@
 package GupangMSA.userservice.domain;
 
-import GupangMSA.userservice.mock.TestClockHolder;
-import GupangMSA.userservice.mock.TestPasswordHolder;
-import GupangMSA.userservice.mock.TestUuidHolder;
+import GupangMSA.userservice.mock.holder.TestClockHolder;
+import GupangMSA.userservice.mock.holder.TestPasswordHolder;
+import GupangMSA.userservice.mock.holder.TestUuidHolder;
 import GupangMSA.userservice.service.port.holder.ClockHolder;
 import GupangMSA.userservice.service.port.holder.PasswordHolder;
 import GupangMSA.userservice.service.port.holder.UuidHolder;

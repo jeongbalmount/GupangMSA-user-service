@@ -1,4 +1,4 @@
-package GupangMSA.userservice.mock;
+package GupangMSA.userservice.mock.holder;
 
 import GupangMSA.userservice.service.port.holder.PasswordHolder;
 import lombok.RequiredArgsConstructor;

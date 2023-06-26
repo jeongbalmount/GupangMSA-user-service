@@ -1,6 +1,7 @@
 package GupangMSA.userservice.domain;
 
 import GupangMSA.userservice.domain.enums.OrderStatus;
+import lombok.Builder;
 import lombok.Getter;
 
 // 주문은
@@ -20,7 +21,7 @@ public class UserOrder {
 
     private final Long userId;
     private final String productName;
-    private final String productPrice;
+    private final int productPrice;
     private final int productCount;
     private final Long orderedTime;
     private final String city;
@@ -28,8 +29,9 @@ public class UserOrder {
     private final String zipcode;
     private final OrderStatus status;
 
+    @Builder
     public UserOrder(Long userId, String productName,
-                     String productPrice, int productCount, Long orderedTime,
+                     int productPrice, int productCount, Long orderedTime,
                      String city, String street, String zipcode, OrderStatus status) {
         this.userId = userId;
         this.productName = productName;

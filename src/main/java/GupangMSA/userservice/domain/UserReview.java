@@ -1,5 +1,6 @@
 package GupangMSA.userservice.domain;
 
+import lombok.Builder;
 import lombok.Getter;
 
 import java.util.List;
@@ -23,6 +24,7 @@ public class UserReview {
     private final List<String> photoUrls;
     private final Long createdAt;
 
+    @Builder
     public UserReview(Long reviewUserId, Long reviewItemId, String title,
                       String description, List<String> photoUrls, Long createdAt) {
         this.reviewUserId = reviewUserId;

@@ -1,4 +1,4 @@
-package GupangMSA.userservice.mock;
+package GupangMSA.userservice.mock.repository;
 
 import GupangMSA.userservice.domain.User;
 import GupangMSA.userservice.service.port.UserRepository;
