@@ -3,22 +3,6 @@ package GupangMSA.userservice.domain;
 import lombok.Builder;
 import lombok.Getter;
 
-/*
-        this.name = name;
-        this.email = email;
-
-        this.city = city;
-        this.street = street;
-        this.postNumber = postNumber;
-        this.phoneNumber
-
-        this.joinedAt = joinedAt;
-    - 이름
-    - 이메일
-    - 휴대폰 번호
-    - 주소
-    - 가입일자
- */
 @Getter
 public class UserResponse {
 

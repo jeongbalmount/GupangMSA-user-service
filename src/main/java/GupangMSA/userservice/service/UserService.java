@@ -22,14 +22,13 @@ public class UserService {
     private final PasswordHolder passwordHolder;
     private final UuidHolder uuidHolder;
 
-    public void create(UserCreate userCreate) {
-        userRepository.save(User.from(userCreate,
+    public User create(UserCreate userCreate) {
+        return userRepository.save(User.from(userCreate,
                 passwordHolder, clockHolder, uuidHolder));
     }
 
-    public UserResponse findById(Long id) {
-        User user = getUser(id);
-        return UserResponse.fromUser(user);
+    public User findById(Long id) {
+        return getUser(id);
     }
 
     public void login(Long id) {

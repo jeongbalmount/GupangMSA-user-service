@@ -6,8 +6,6 @@ import GupangMSA.userservice.service.port.holder.UuidHolder;
 import lombok.Builder;
 import lombok.Getter;
 
-import java.util.UUID;
-
 @Getter
 public class User {
     private final Long id;
@@ -49,7 +47,7 @@ public class User {
         return User.builder()
                 .name(userCreate.getName())
                 .email(userCreate.getEmail())
-                .password(passwordHolder.password())
+                .password(passwordHolder.password(userCreate.getPassword()))
                 .city(userCreate.getCity())
                 .street(userCreate.getStreet())
                 .postNumber(userCreate.getPostNumber())
