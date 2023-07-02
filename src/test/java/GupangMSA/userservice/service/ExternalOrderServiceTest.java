@@ -15,18 +15,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class ExternalOrderServiceTest {
 
-    /*
-    private final Long userId;
-    private final String productName;
-    private final String productPrice;
-    private final int productCount;
-    private final Long orderedTime;
-    private final String city;
-    private final String street;
-    private final String zipcode;
-    private final OrderStatus status;
-     */
-
     private ExternalOrderService externalOrderService;
     @BeforeEach
     void init() {

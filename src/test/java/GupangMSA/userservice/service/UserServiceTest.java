@@ -26,7 +26,6 @@ public class UserServiceTest {
                 new TestUuidHolder("aaaaaa-bbbbbb-cccccc"));
 
         User user1 = User.builder()
-                .id(1L)
                 .name("jang")
                 .email("jang@gmail.com")
                 .password("encryptedPassword")
@@ -40,7 +39,6 @@ public class UserServiceTest {
                 .lastLoginAt(10001L)
                 .build();
         User user2 = User.builder()
-                .id(2L)
                 .name("kim")
                 .email("kim@gmail.com")
                 .password("encryptedPassword2")
